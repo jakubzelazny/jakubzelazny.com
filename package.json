@@ -1,0 +1,24 @@
+{
+  "name": "jakubzelazny.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jakubzelazny/jakubzelazny.com.git",
+  "author": "Jakub Żelazny <zelazny.jakub.jerzy@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "jekyll:dev": "bundle exec jekyll serve --incremental --watch",
+    "jekyll:build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "css:dev": "postcss _sass/main.scss --output assets/css/style.css --watch",
+    "css:build": "NODE_ENV=production postcss _sass/main.scss --output assets/css/style.css",
+    "dev": "concurrently --kill-others \"npm run jekyll:dev\" \"npm run css:dev\"",
+    "build": "npm run css:build && npm run jekyll:build"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.3.6",
+    "concurrently": "^6.2.2",
+    "cssnano": "^5.0.8",
+    "postcss": "^8.3.8",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.16"
+  }
+}
