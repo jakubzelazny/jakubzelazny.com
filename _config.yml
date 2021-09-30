@@ -2,6 +2,10 @@
 title: jakubzelazny.com
 timezone: UTC
 collections:
+  blog:
+    title: Blog
+    output: true
+    permalink: "/blog"
   posts:
     title: Posts
     output: true
