@@ -6,7 +6,7 @@
   "author": "Jakub Żelazny <zelazny.jakub.jerzy@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "jekyll:dev": "bundle exec jekyll serve --incremental --watch",
+    "jekyll:dev": "bundle exec jekyll serve --livereload --incremental --watch",
     "jekyll:build": "JEKYLL_ENV=production bundle exec jekyll build",
     "css:dev": "postcss _sass/main.scss --output assets/css/style.css --watch",
     "css:build": "NODE_ENV=production postcss _sass/main.scss --output assets/css/style.css",
@@ -14,6 +14,7 @@
     "build": "npm run css:build && npm run jekyll:build"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.6",
     "concurrently": "^6.2.2",
     "cssnano": "^5.0.8",

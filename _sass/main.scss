@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a:link {
+  @apply text-indigo-600;
+}
+
+a:visited {
+  @apply text-indigo-700;
+}
+
+a:hover {
+  @apply text-indigo-800;
+}
